@@ -168,9 +168,9 @@ def recommend():
 
         working = materials_df.copy()
 
-        # ---- SAFE COLUMN CHECK ----
+        #  SAFE COLUMN CHECK 
         if "cost_per_unit" not in working.columns:
-            # fallback dummy cost if column missing
+            
             working["cost_per_unit"] = 10
 
         if use_cost_model:
@@ -182,7 +182,7 @@ def recommend():
         else:
             working["predicted_unit_cost"] = working["cost_per_unit"]
 
-        # ---- SAFE MIN/MAX ----
+        #  SAFE MIN/MAX 
         cost_min = working["predicted_unit_cost"].min()
         cost_max = working["predicted_unit_cost"].max()
 
@@ -269,15 +269,16 @@ def recommend():
                 }
             )
 
-            for _, row in top.iterrows():
-                conn.execute(
-                    text("""
-                        INSERT INTO usage_logs
-                        (material_name, quantity)
-                        VALUES (:m, :q)
-                    """),
-                    {"m": row["material_name"], "q": quantity},
-                )
+            # SAVE ONLY TOP MATERIAL USAGE
+            conn.execute(
+            text("""
+                INSERT INTO usage_logs
+                (material_name, quantity)
+                VALUES (:m, :q)
+                """),
+            {"m": top_row["material_name"], "q": quantity},
+            )
+
 
         return jsonify({
             "product_name": product_name,
