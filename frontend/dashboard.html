@@ -357,7 +357,7 @@ data:{labels,datasets:[{label:"AI Score",data:scores}]}
 
 /* ---------- MATERIAL USAGE ---------- */
 
-fetch("http://127.0.0.1:5000/analytics/usage")
+fetch("https://ecopackai-ai-powere-sustinable-packing.onrender.com/analytics/usage")
 .then(r => r.json())
 .then(data => {
 
@@ -389,7 +389,7 @@ fill:false
 
 function downloadCSV(){
 
-fetch("http://127.0.0.1:5000/export/csv",{
+fetch("https://ecopackai-ai-powere-sustinable-packing.onrender.com/export/csv",{
 method:"POST",
 headers:{"Content-Type":"application/json"},
 body:JSON.stringify(lastResult)
@@ -407,7 +407,7 @@ a.click();
 
 function downloadPDF(){
 
-fetch("http://127.0.0.1:5000/export/pdf",{
+fetch("https://ecopackai-ai-powere-sustinable-packing.onrender.com/export/pdf",{
 method:"POST",
 headers:{"Content-Type":"application/json"},
 body:JSON.stringify(lastResult)
