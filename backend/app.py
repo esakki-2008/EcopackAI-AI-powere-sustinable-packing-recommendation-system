@@ -25,31 +25,32 @@ from reportlab.lib import colors
 from reportlab.lib.styles import getSampleStyleSheet
 
 
-# ENV 
+
+# ENV
+
 
 load_dotenv()
 
-DB_HOST = os.getenv("DB_HOST")
-DB_PORT = os.getenv("DB_PORT")
-DB_NAME = os.getenv("DB_NAME")
-DB_USER = os.getenv("DB_USER")
-DB_PASSWORD = os.getenv("DB_PASSWORD")
-
-CO2_MODEL_PATH = os.getenv("CO2_MODEL_PATH")
-COST_MODEL_PATH = os.getenv("COST_MODEL_PATH")
-
+DATABASE_URL = os.getenv("DATABASE_URL")
+CO2_MODEL_PATH = os.getenv("CO2_MODEL_PATH", "models/co2_model.pkl")
+COST_MODEL_PATH = os.getenv("COST_MODEL_PATH", "models/cost_model.pkl")
 LOG_FILE = os.getenv("LOG_FILE", "logs/ecopackai.log")
+
+if not DATABASE_URL:
+    raise ValueError("DATABASE_URL is not set!")
+
+
+# DATABASE
+
+
+engine = create_engine(DATABASE_URL)
+
+
+
+# LOGGING
+
+
 os.makedirs("logs", exist_ok=True)
-
-ENCODED_PASSWORD = quote_plus(DB_PASSWORD)
-
-DATABASE_URL = (
-    f"postgresql+psycopg2://{DB_USER}:{ENCODED_PASSWORD}"
-    f"@{DB_HOST}:{DB_PORT}/{DB_NAME}"
-)
-
-
-# LOGGING 
 
 logging.basicConfig(
     level=logging.INFO,
@@ -61,7 +62,7 @@ logging.basicConfig(
 )
 
 logger = logging.getLogger("EcoPackAI")
-
+logger.info("CONNECTED DATABASE")
 
 # APP 
 
@@ -566,4 +567,4 @@ def export_pdf():
 # RUN 
 
 if __name__ == "__main__":
-    app.run()
+    app.run(host="0.0.0.0", port=5000)
