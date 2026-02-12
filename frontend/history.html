@@ -264,7 +264,7 @@ function updateCompareBtn(){
 
 function compareRuns(){
 
-fetch(`http://127.0.0.1:5000/history/compare?id=${selectedRuns[0]}&id=${selectedRuns[1]}`)
+fetch(`https://ecopackai-ai-powere-sustinable-packing.onrender.com/history/compare?id=${selectedRuns[0]}&id=${selectedRuns[1]}`)
 .then(r => r.json())
 .then(data => {
 
