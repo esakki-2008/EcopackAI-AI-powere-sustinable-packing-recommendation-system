@@ -155,7 +155,7 @@ let selectedRuns = [];
 
 /*  LOAD HISTORY  */
 
-fetch("http://127.0.0.1:5000/history")
+fetch("https://ecopackai-ai-powere-sustinable-packing.onrender.com/history")
 .then(res => res.json())
 .then(data => {
 
@@ -310,7 +310,7 @@ e.stopPropagation();
 
 if(!confirm("Delete this history entry permanently?")) return;
 
-fetch(`http://127.0.0.1:5000/history/${id}`,{
+fetch(`https://ecopackai-ai-powere-sustinable-packing.onrender.com/history/usage/${id}`,{
 method:"DELETE"
 })
 .then(r => r.json())
