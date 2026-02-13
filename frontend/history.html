@@ -310,7 +310,7 @@ e.stopPropagation();
 
 if(!confirm("Delete this history entry permanently?")) return;
 
-fetch(`https://ecopackai-ai-powere-sustinable-packing.onrender.com/history/usage/${id}`,{
+fetch(`https://ecopackai-ai-powere-sustinable-packing.onrender.com/history/${id}`,{
 method:"DELETE"
 })
 .then(r => r.json())
