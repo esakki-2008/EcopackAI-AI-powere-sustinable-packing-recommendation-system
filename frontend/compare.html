@@ -57,7 +57,6 @@ border-radius:12px;
 padding:12px;
 }
 
-/* ===== FIX CARD TEXT VISIBILITY ===== */
 
 .card,
 .card * {
@@ -89,7 +88,7 @@ padding:12px;
     color: white !important;
 }
 
-/* ===== FORCE TABLE TEXT BLACK ===== */
+
 
 table,
 .table,
@@ -100,7 +99,6 @@ table,
     color: #000 !important;
 }
 
-/* optional: light background so black text is readable */
 
 .table tbody tr {
     background: rgba(255,255,255,0.85);
@@ -200,7 +198,7 @@ table,
 
 <script>
 
-/* ================= LOAD FROM STORAGE ================= */
+/*  LOAD FROM STORAGE  */
 
 const selected = JSON.parse(localStorage.getItem("eco_compare"));
 
@@ -209,7 +207,7 @@ alert("No comparison data found. Go back to dashboard.");
 window.location.href = "dashboard.html";
 }
 
-/* ================= TABLE ================= */
+/*  TABLE  */
 
 const tbody = document.getElementById("compareTable");
 
@@ -227,7 +225,7 @@ tbody.innerHTML += `
 
 });
 
-/* ================= WINNER ================= */
+/*  WINNER  */
 
 const winner = [...selected].sort(
 (a,b)=>b.ai_recommendation_score - a.ai_recommendation_score
@@ -236,14 +234,14 @@ const winner = [...selected].sort(
 document.getElementById("winnerName").innerText =
 winner.material_name;
 
-/* ================= CHART DATA ================= */
+/*  CHART DATA  */
 
 const labels = selected.map(x=>x.material_name);
 const unitCosts = selected.map(x=>x.predicted_unit_cost);
 const totalCosts = selected.map(x=>x.total_cost);
 const scores = selected.map(x=>x.ai_recommendation_score);
 
-/* ================= CHARTS ================= */
+/*  CHARTS  */
 
 new Chart(document.getElementById("unitChart"),{
 type:"bar",

@@ -314,7 +314,7 @@ resultTable.innerHTML = "";
 
 const labels=[], costs=[], scores=[];
 
-/* ---------- TABLE LOOP ---------- */
+/*  TABLE LOOP  */
 
 recs.forEach((r,i)=>{
 
@@ -337,7 +337,7 @@ resultTable.innerHTML += `
 
 });
 
-/* ---------- COST CHART ---------- */
+/*  COST CHART  */
 
 if(costChart) costChart.destroy();
 
@@ -346,7 +346,7 @@ type:"bar",
 data:{labels,datasets:[{label:"Total Cost",data:costs}]}
 });
 
-/* ---------- SCORE CHART ---------- */
+/*  SCORE CHART  */
 
 if(scoreChart) scoreChart.destroy();
 
@@ -355,7 +355,7 @@ type:"line",
 data:{labels,datasets:[{label:"AI Score",data:scores}]}
 });
 
-/* ---------- MATERIAL USAGE ---------- */
+/*  MATERIAL USAGE  */
 
 fetch("https://ecopackai-ai-powere-sustinable-packing.onrender.com/analytics/usage")
 .then(r => r.json())
@@ -385,7 +385,7 @@ fill:false
 });
 }
 
-/* ---------- EXPORT CSV ---------- */
+/*  EXPORT CSV  */
 
 function downloadCSV(){
 
@@ -403,7 +403,7 @@ a.click();
 });
 }
 
-/* ---------- EXPORT PDF ---------- */
+/*  EXPORT PDF  */
 
 function downloadPDF(){
 
@@ -421,13 +421,13 @@ a.click();
 });
 }
 
-/* ---------- CANVAS SHORTCUTS ---------- */
+/*  CANVAS SHORTCUTS  */
 
 const costChartElem = document.getElementById("costChart");
 const scoreChartElem = document.getElementById("scoreChart");
 const usageChartElem = document.getElementById("usageChart");
 
-/* ---------- COMPARE ---------- */
+/*  COMPARE  */
 
 function compareSelected(){
 

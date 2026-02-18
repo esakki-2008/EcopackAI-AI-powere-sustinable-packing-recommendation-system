@@ -9,6 +9,13 @@ EcoPackAI is an AI-powered full-stack application that recommends eco-friendly p
 
 It combines machine learning, a Flask backend, and an interactive web dashboard.
 
+🌐 Deployed Website
+
+You can access the live application here:
+
+👉 https://ecopackai-ai-powere-sustinable-packing-9nz6.onrender.com
+
+
 📁 Project Structure
 PROJECT ECOPACKAI
 │
@@ -187,3 +194,41 @@ Key Features 1.Dark-themed dashboard UI 2.Input form for product parameters: 1.P
 User Experience Enhancements 1.Responsive layout 2.Dashboard-style presentation 3.Graphical insights for decision-making
 
 Outcome 1.End-to-end interaction between frontend and backend 2.Clear visualization of AI-driven recommendations
+
+📘 Module 7: Business Intelligence Dashboard
+
+The BI Dashboard provides sustainability insights using real-time analytics.
+
+Key Features:
+
+CO₂ Reduction % visualization
+
+Cost Savings Analysis
+
+Material Usage Trends
+
+Optimizer-based comparison graphs
+
+Export reports in PDF & CSV format
+
+This module helps businesses track environmental impact and financial efficiency using interactive charts and reports.
+
+📘 Module 8: Deployment & Documentation
+
+This module ensures the project is production-ready and well-documented.
+
+Key Features:
+
+Deployment on Render/Heroku
+
+PostgreSQL cloud database integration
+
+Complete backend + frontend integration
+
+REST API documentation
+
+README + Technical Documentation
+
+Final project report & demo
+
+This module makes EcoPackAI scalable, accessible, and industry-ready.
