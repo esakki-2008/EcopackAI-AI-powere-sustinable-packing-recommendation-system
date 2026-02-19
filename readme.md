@@ -96,6 +96,117 @@ Deploy the system on Render Cloud for real-world accessibility and scalability.
 This solution ensures businesses can adopt eco-friendly packaging in a data-driven, cost-effective, and environmentally responsible manner. 🌱
 ---
 
+✨ Key Features
+---
+
+    🤖 AI-Based Recommendation Engine (Random Forest + XGBoost)
+
+    🌱 CO₂ Impact & Sustainability Analysis
+
+    💰 Cost Prediction & Optimization
+
+    ⚖ Multi-Objective Optimizer (Cost vs CO₂ vs Strength)
+
+    🗂 Recommendation History Tracking (stored in PostgreSQL)
+    
+    🗑 History Management with Delete Option
+
+    📊 Interactive Dashboard with Charts
+
+    📈 Material Comparison Module
+
+    🧾 CSV & PDF Export Reports
+
+    🗄 PostgreSQL Data Logging & Analytics
+
+    ☁ Cloud Deployment on Render
+
+
+---
+
+📊 Innovation Highlights
+---
+
+    🧠 AI-Driven Sustainable Decision Engine combining ML with real-world packaging metrics
+
+    ⚖ Multi-Objective Optimization allowing dynamic trade-offs between Cost, CO₂, and Strength
+
+    📊 Interactive Comparison Dashboard for data-driven material selection
+
+    🌍 CO₂ Reduction Analytics with measurable environmental impact tracking
+
+    ☁ Cloud-Native Architecture (Render + PostgreSQL) for scalable deployment
+
+    🔁 End-to-End Intelligent Workflow from recommendation → optimization → analytics → export
+
+---
+
+Here is a clean, professional Technology Stack section (short & distinction-ready) 👇
+
+
+---
+
+🛠 Technology Stack
+---
+
+💻 Frontend
+
+    HTML5
+
+    CSS3
+
+    Bootstrap 5
+
+    JavaScript (ES6)
+
+    Chart.js (Data Visualization)
+
+⚙ Backend
+
+    Python 3.11
+
+    Flask (REST API)
+
+    Flask-CORS
+
+
+🤖 Machine Learning
+
+    scikit-learn
+
+    XGBoost
+
+    Pandas
+
+    NumPy
+
+    Joblib (Model Serialization)
+
+    StandardScaler (Feature Normalization)
+
+🗄 Database
+
+    PostgreSQL
+
+    SQLAlchemy (ORM)
+
+
+☁ Deployment
+
+    Render Cloud Platform
+
+    Gunicorn (Production Server)
+
+
+🔧 Tools & Version Control
+
+    Git & GitHub
+
+    VS Code
+
+    ThunderClient (API Testing)
+
+---
 🏗️ System Architecture
 ---
 EcoPackAI follows a layered full-stack architecture integrating Frontend, Backend API, Machine Learning, and Database components, deployed on cloud infrastructure.
@@ -445,51 +556,6 @@ Ensured production stability.
 
 ---
 
-✨ Key Features
----
-
-    🤖 AI-Based Recommendation Engine (Random Forest + XGBoost)
-
-    🌱 CO₂ Impact & Sustainability Analysis
-
-    💰 Cost Prediction & Optimization
-
-    ⚖ Multi-Objective Optimizer (Cost vs CO₂ vs Strength)
-
-    🗂 Recommendation History Tracking (stored in PostgreSQL)
-    
-    🗑 History Management with Delete Option
-
-    📊 Interactive Dashboard with Charts
-
-    📈 Material Comparison Module
-
-    🧾 CSV & PDF Export Reports
-
-    🗄 PostgreSQL Data Logging & Analytics
-
-    ☁ Cloud Deployment on Render
-
-
----
-
-📊 Innovation Highlights
----
-
-    🧠 AI-Driven Sustainable Decision Engine combining ML with real-world packaging metrics
-
-    ⚖ Multi-Objective Optimization allowing dynamic trade-offs between Cost, CO₂, and Strength
-
-    📊 Interactive Comparison Dashboard for data-driven material selection
-
-    🌍 CO₂ Reduction Analytics with measurable environmental impact tracking
-
-    ☁ Cloud-Native Architecture (Render + PostgreSQL) for scalable deployment
-
-    🔁 End-to-End Intelligent Workflow from recommendation → optimization → analytics → export
-
----
-
 Screenshots
 ---
 
@@ -581,6 +647,34 @@ The project goes beyond a basic ML prototype by implementing a complete full-sta
 
 EcoPackAI represents a practical, industry-relevant solution that combines AI innovation with sustainability impact, demonstrating both strong technical implementation and real-world applicability.
 
+---
+
+🏢 Internship Information
+---
+    Organization: Infosys Springboard
+
+    Domain: Artificial Intelligence & Machine Learning
+
+    Duration: 8 Weeks
+
+    Deployment: Render Cloud
+
+    Developer: Esakki Raja Salaikumar
+
+---
+🎓 Internship Learning Outcomes
+---
+    Applied Machine Learning in a production-ready system
+
+    Designed scalable REST APIs using Flask
+
+    Integrated PostgreSQL with cloud deployment
+
+    Implemented multi-objective optimization logic
+
+    Built real-time analytics dashboards
+
+    Deployed full-stack application on Render Cloud
 
 ---
 
